@@ -6,7 +6,7 @@ Install this VSIX in **Cursor** or VS Code. On startup it copies into your user 
 
 - `.cursor/rules` (from bundle)
 - `.cursor/skills` (from bundle)
-- `.cursor/AI_AUTOMATION` — **library** (`runners/`, `Login.md`, `Teardown.md` only; **not** `winexecution/` or `DataImport.md`), **HONI/Workflow** with **Testcase** files for **TC001–TC003** only, and a **blank** `config.json` template
+- `.cursor/AI_AUTOMATION` — **library** (`runners/`, `Login.md`, `Teardown.md` only; **not** `winexecution/` or `DataImport.md`), **HONI/Workflow** with **Testcase** files for **TC001–TC003**, **`Testdata/`** (workflow importer files you place there), and a **blank** `config.json` template
 
 **`test-results` is not shipped**; it is created when you run tests.
 

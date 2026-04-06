@@ -1,18 +1,12 @@
-# TC002 - Configure Workflow 1.2
+﻿# TC002 - Configure Workflow 1.2
 
 ## Meta
 - Test Case ID: TC002
 - Priority: High
 - Tags: login, Workflow Testing, regression, configuration, investment
 
-## Test Data
-- Workflow Entity: Investment
-- Workflow 1.1 Name: WF1.1_Investment Feedback - Investment WF
-- Workflow 1.2 Name: WF1.2_Investment Feedback with Validate Investment - Investment WF
-- Workflow 1.2 Description: WF1.2 investment feedback workflow with Validate Investment step (Investment entity).
-- Task 1: Feedback: Send to Investment Owner
-- Task 2: Validate Investment
-- Task 3: Feedback: Save Reviewer Comments
+## Test data
+- Workflow test data importer named <File name> is being used.
 
 ## Mandatory Hook Policy
 - Before executing this test case, execute `../../../library/Login.md`.

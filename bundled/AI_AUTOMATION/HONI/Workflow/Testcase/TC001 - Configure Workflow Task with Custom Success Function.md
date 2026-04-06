@@ -1,15 +1,12 @@
-# TC001 - Configure Workflow Task with Custom Success Function
+﻿# TC001 - Configure Workflow Task with Custom Success Function
 
 ## Meta
 - Test Case ID: TC001
 - Priority: High
 - Tags: login, Workflow Testing, regression
 
-## Test Data
-- Configurable Field: Investment Feedback
-- Target System Entity: Investment
-- Workflow Task Name: TC001 - Configure Workflow Task with Custom Success Function
-- Workflow Task Description: Validate Save Previous Task Comment To Configurable Field for Investment Feedback
+## Test data
+- Workflow test data importer named <File name> is being used.
 
 ## Mandatory Hook Policy
 - Before executing this test case, execute `../../../library/Login.md`.

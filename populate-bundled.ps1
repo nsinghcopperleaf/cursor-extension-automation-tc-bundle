@@ -17,6 +17,17 @@ Copy-Item "$src\AI_AUTOMATION\library\*" "$bd\library\" -Recurse -Force
 Remove-Item "$bd\library\winexecution" -Recurse -Force -ErrorAction SilentlyContinue
 Remove-Item "$bd\library\DataImport.md" -Force -ErrorAction SilentlyContinue
 New-Item -ItemType Directory -Force -Path "$bd\HONI\Workflow\Testcase" | Out-Null
+New-Item -ItemType Directory -Force -Path "$bd\HONI\Workflow\Testdata" | Out-Null
+
+$testDataSrc = Join-Path $src "AI_AUTOMATION\HONI\Workflow\Testdata"
+$testDataDest = "$bd\HONI\Workflow\Testdata"
+if (Test-Path -LiteralPath $testDataSrc) {
+    $items = Get-ChildItem -LiteralPath $testDataSrc -Force -ErrorAction SilentlyContinue
+    if ($items) {
+        # -Path (not -LiteralPath) so * expands; -LiteralPath would treat * as a literal name
+        Copy-Item -Path "$testDataSrc\*" -Destination $testDataDest -Recurse -Force
+    }
+}
 
 $template = @'
 {

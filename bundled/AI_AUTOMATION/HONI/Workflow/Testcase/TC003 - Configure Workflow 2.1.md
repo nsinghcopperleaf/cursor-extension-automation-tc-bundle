@@ -1,19 +1,12 @@
-# TC003 - Configure Workflow 2.1
+﻿# TC003 - Configure Workflow 2.1
 
 ## Meta
 - Test Case ID: TC003
 - Priority: High
 - Tags: login, Workflow Testing, regression, configuration, portfolio
 
-## Test Data
-- Target System Entity: Portfolio
-- Success Function: Run Workflow On Portfolio Investments
-- Workflow Task 2.1 Name: WF2.1_Launch Investment Feedback WF from Portfolio
-- Workflow Task 2.2 Name: WF2.2_Launch Investment Feedback with Validate Investment WF from Portfolio
-- Investment Workflow (2.1): WF1.1_Investment Feedback - Investment WF
-- Investment Workflow (2.2): WF1.2_Investment Feedback with Validate Investment - Investment WF
-- Child Portfolios: Enabled
-- Run on Child Investments: Enabled
+## Test data
+- Workflow test data importer named <File name> is being used.
 
 ## Mandatory Hook Policy
 - Before executing this test case, execute `../../../library/Login.md`.
