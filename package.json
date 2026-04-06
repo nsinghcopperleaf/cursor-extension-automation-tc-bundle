@@ -1,0 +1,32 @@
+{
+  "name": "cursor-automation-tc-bundle",
+  "displayName": "Cursor Automation TC Bundle",
+  "description": "Syncs rules, skills, and AI_AUTOMATION (TC001–TC003 only) into the user .cursor folder on activation.",
+  "version": "0.1.0",
+  "publisher": "honi-local",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nsinghcopperleaf/cursor-extension-automation-tc-bundle.git"
+  },
+  "homepage": "https://github.com/nsinghcopperleaf/cursor-extension-automation-tc-bundle",
+  "bugs": {
+    "url": "https://github.com/nsinghcopperleaf/cursor-extension-automation-tc-bundle/issues"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "cursorHoniBundle.syncNow",
+        "title": "HONI Bundle: Sync rules, skills, AI_AUTOMATION (TC001–003)"
+      }
+    ]
+  },
+  "scripts": {
+    "package-vsix": "node scripts/package-vsix.cjs"
+  }
+}

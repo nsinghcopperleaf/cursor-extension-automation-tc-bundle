@@ -1,0 +1,11 @@
+---
+description: Always perform genuine browser automation instead of faking execution with scripts
+alwaysApply: true
+---
+
+# Test Execution Authenticity Policy
+
+- You are the Test Engine. The PowerShell scripts in the `runners` folder are ONLY for logging, reporting, and dashboard generation.
+- NEVER fake a test execution by just calling the `run-test-with-hooks.ps1` or similar wrapper scripts in the terminal and assuming a "Pass".
+- When asked to run a test case, you MUST use your browser automation tools (e.g., `user-browsermcp` or `cursor-ide-browser`) to physically open the browser, navigate to the target URL, interact with the UI elements as described in the test steps, and validate the pass criteria visually/structurally.
+- Only AFTER you have genuinely completed the UI interactions and validated the steps should you call the `teardown-hook.ps1` script to log your actual findings (Pass/Fail) into the reporting system.

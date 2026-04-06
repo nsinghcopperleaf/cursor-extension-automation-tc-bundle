@@ -1,0 +1,12 @@
+---
+description: Default browser preference for web browsing tasks
+alwaysApply: true
+---
+
+# Browser Preference
+
+When asked to open a URL or perform browser tasks, use **cursor-ide-browser** (built-in Cursor / IDE browser) by default.
+
+Use **user-browsermcp** (external MCP browser) only when:
+- The user explicitly asks for the external browser, **user-browsermcp**, the Browser MCP extension, or similar wording that means the external MCP browser, or
+- The cursor-ide-browser server is not connected or unavailable (then use user-browsermcp if it is available).

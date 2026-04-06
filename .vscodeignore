@@ -1,0 +1,8 @@
+.vscode/**
+**/*.map
+.gitignore
+*.vsix
+npm-debug.log
+.npmrc
+populate-bundled.ps1
+scripts/**

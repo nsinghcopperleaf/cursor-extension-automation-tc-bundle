@@ -1,0 +1,10 @@
+---
+description: Always re-run test cases when requested, regardless of prior pass status
+alwaysApply: true
+---
+
+# Test Case Re-Run Policy
+
+- If the user asks to "re-run", "rerun", or run a test case again, you MUST execute the test case fully from the beginning.
+- NEVER skip or bypass the execution of a test case simply because it has previously passed or because there are existing test results/logs indicating a success.
+- A request to run or re-run is an explicit instruction to perform the automation steps again in the browser.

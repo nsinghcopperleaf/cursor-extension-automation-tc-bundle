@@ -1,0 +1,10 @@
+---
+description: Test Case Ignore Logic
+alwaysApply: true
+---
+
+# Test Case Ignore Logic
+
+- If you are asked to ignore a test case, add `- Ignore: true` under the `## Meta` section of the test case `.md` file.
+- When executing tests, the automation scripts (`run-all-tests.ps1`, `run-test-with-hooks.ps1`) will automatically scan the first 20 lines of the `.md` file. If they find `- Ignore: true` or `- Status: Ignored`, they will skip execution and mark the test as "Ignored".
+- Do not attempt to run steps for test cases that contain this ignore flag.

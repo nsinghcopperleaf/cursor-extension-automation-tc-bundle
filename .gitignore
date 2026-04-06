@@ -1,0 +1,10 @@
+# Dependencies (if you add any later)
+node_modules/
+
+# Built extension package (attach via GitHub Releases instead, or commit if your team prefers)
+*.vsix
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.log

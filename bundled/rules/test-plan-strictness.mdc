@@ -1,0 +1,31 @@
+---
+description: Fail tests instead of performing out-of-test-plan actions
+alwaysApply: true
+---
+
+# Strict Test Plan Enforcement (No Out-of-Plan Actions)
+
+When executing a test case, you MUST follow the test plan exactly. If continuing would require actions not explicitly described in the test case (or its explicitly referenced shared library steps/config), you MUST treat that as a test failure.
+
+## Allowed (non-mutating) execution aids
+
+- Retry an action after a fresh snapshot (e.g., click/type retry).
+- Dismiss overlays/menus (e.g., `Escape`) and re-attempt the planned step.
+- Wait for UI to load, scroll into view, or refresh the page if the planned element is not yet interactable.
+- Use an equivalent navigation method to reach the same page/record referenced by the plan, as long as it does NOT change data.
+
+## Disallowed (out-of-test-plan) actions
+
+- Entering/selecting values that are not specified by the test plan (including “fixing” missing **Required** fields).
+- Editing any record fields as a workaround to make the test proceed or “pass.”
+- Changing test data prerequisites (owners, statuses, categories, relationships, etc.) unless the test plan explicitly instructs it.
+
+## What to do when an out-of-plan action would be required
+
+- STOP the test case immediately.
+- Take a screenshot of the current state (including any validation/required-field prompts).
+- Mark the test as **Fail** with:
+  - `FailedStep`: the step you were attempting.
+  - `ActualResult`: state observed (e.g., “Save blocked by required fields not specified in test plan.”).
+  - `WhatWentWrong`: “Continuing would require out-of-test-plan data changes.”
+- Run the standard teardown/reporting process (e.g., `teardown-hook.ps1`).

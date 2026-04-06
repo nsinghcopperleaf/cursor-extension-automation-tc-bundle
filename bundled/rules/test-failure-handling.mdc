@@ -1,0 +1,12 @@
+---
+description: Stop execution immediately on test step failure and cleanup data
+alwaysApply: true
+---
+
+# Test Failure Handling Policy
+
+- If a test step fails to execute, errors out, or does not meet the pass criteria at any point during execution, you MUST STOP proceeding with the rest of the test case.
+- DO NOT keep trying to work around the failure or force the test to continue.
+- Immediately attempt to delete any data created during the current test run (if any).
+- Mark the overall test as **Fail**.
+- Document the failed step, take a screenshot of the failure state if possible, and execute the standard teardown/reporting process (e.g., calling `teardown-hook.ps1`).

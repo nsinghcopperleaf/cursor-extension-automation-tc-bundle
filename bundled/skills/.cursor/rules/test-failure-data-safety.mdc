@@ -1,0 +1,14 @@
+---
+description: Prevent new data creation during failing test runs
+alwaysApply: true
+---
+
+# Test Failure Data Safety
+
+- If a test case is already failing, do not create new data as part of troubleshooting or continuation steps.
+- Reuse existing records, fixtures, or already-created entities when possible.
+- Only create new data after an explicit user instruction that authorizes it.
+- When blocked by missing data, report the blocker and stop rather than generating additional data by default.
+
+Example:
+- Failing login or validation step: capture evidence and report failure; do not create a fresh account or dataset unless requested.
